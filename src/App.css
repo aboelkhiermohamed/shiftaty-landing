@@ -1,0 +1,74 @@
+/* App-specific styles */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+  color: inherit;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+/* Phone mockup notch fix */
+.phone-mockup {
+  position: relative;
+}
+
+/* Image loading placeholder */
+img {
+  background-color: #F1F5F9;
+}
+
+/* Prevent text selection on decorative elements */
+.phone-mockup,
+.glass-card,
+.glass-card-dark {
+  user-select: none;
+}
+
+/* Mobile touch improvements */
+@media (hover: none) {
+  .feature-card:hover,
+  .glass-card:hover {
+    transform: none;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Fix for gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #3B82F6 0%, #10B981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark section gradient text fix */
+.bg-navy-900 .text-gradient {
+  background: linear-gradient(135deg, #60A5FA 0%, #34D399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
