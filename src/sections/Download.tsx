@@ -79,7 +79,7 @@ const Download = () => {
                   </Button>
                 </a>
                 <a
-                  href="https://www.mediafire.com/file/3n0kyllhr90o32j/Shiftaty.apk/file"
+                  href="https://www.mediafire.com/file/qsqd63y60a3l7ok/shiftaty.apk/file"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex"

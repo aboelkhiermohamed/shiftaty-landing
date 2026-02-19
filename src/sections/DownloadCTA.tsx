@@ -71,89 +71,106 @@ const DownloadCTA = () => {
               ))}
             </div>
 
-            {/* Download Buttons */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start">
-              <a
-                href="https://t.me/shiftaty"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex"
-              >
-                <Button className="bg-white text-brand-blue hover:bg-white/90 text-base px-8 py-6 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
-                  <MessageCircle className="w-5 h-5" />
-                  <span className="arabic-text">تحميل عبر Telegram</span>
-                </Button>
-              </a>
-              <a
-                href="/shiftaty.apk"
-                download
-                className="inline-flex"
-              >
-                <Button
-                  variant="outline"
-                  className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-base px-8 py-6 flex items-center justify-center gap-2"
-                >
-                  <DownloadIcon className="w-5 h-5" />
-                  <span className="arabic-text">رابط مباشر (APK)</span>
-                  <ExternalLink className="w-4 h-4" />
-                </Button>
-              </a>
-              <a
-                href="https://www.mediafire.com/file/3n0kyllhr90o32j/Shiftaty.apk/file"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex"
-              >
-                <Button
-                  variant="outline"
-                  className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-base px-8 py-6 flex items-center justify-center gap-2"
-                >
-                  <DownloadIcon className="w-5 h-5" />
-                  <span className="arabic-text">MediaFire</span>
-                  <ExternalLink className="w-4 h-4" />
-                </Button>
-              </a>
-            </div>
-
-            {/* Platform Note */}
-            <div className="mt-8 flex items-center justify-center lg:justify-start gap-2 text-white/70">
-              <Smartphone className="w-5 h-5" />
-              <span className="arabic-text text-sm">متاح على Android (APK)</span>
-            </div>
           </div>
 
-          {/* App Icon Display */}
-          <div className={`w-full lg:w-1/2 flex justify-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
-            <div className="relative">
-              {/* Glow */}
-              <div className="absolute inset-0 bg-white/30 rounded-3xl blur-3xl scale-150" />
+          {/* iOS Button */}
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start">
+            <a
+              href="/ios-install.html"
+              className="inline-flex"
+            >
+              <Button className="bg-white text-black hover:bg-white/90 text-base px-8 py-6 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.74 1.18 0 2.24-.93 3.57-.79 1.52.12 2.65.7 3.4 1.75-2.92 1.6-2.45 6.09.56 7.42-.51 1.4-1.28 2.89-2.61 3.85zM12.03 7.25c-.15 2.23-1.66 4.07-3.74 4.25-.29-2.31 1.5-4.52 3.74-4.25z" />
+                </svg>
+                <span className="arabic-text">تحميل للآيفون (iOS)</span>
+              </Button>
+            </a>
+            <a
+              href="https://t.me/shiftaty"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex"
+            >
+              <Button className="bg-white text-brand-blue hover:bg-white/90 text-base px-8 py-6 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+                <MessageCircle className="w-5 h-5" />
+                <span className="arabic-text">تحميل عبر Telegram</span>
+              </Button>
+            </a>
+            <a
+              href="/shiftaty.apk"
+              download
+              className="inline-flex"
+            >
+              <Button
+                variant="outline"
+                className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-base px-8 py-6 flex items-center justify-center gap-2"
+              >
+                <DownloadIcon className="w-5 h-5" />
+                <span className="arabic-text">رابط مباشر (APK)</span>
+                <ExternalLink className="w-4 h-4" />
+              </Button>
+            </a>
+            <a
+              href="https://www.mediafire.com/file/qsqd63y60a3l7ok/shiftaty.apk/file"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex"
+            >
+              <Button
+                variant="outline"
+                className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-base px-8 py-6 flex items-center justify-center gap-2"
+              >
+                <DownloadIcon className="w-5 h-5" />
+                <span className="arabic-text">MediaFire</span>
+                <ExternalLink className="w-4 h-4" />
+              </Button>
+            </a>
+          </div>
 
-              {/* App Icon Card */}
-              <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 shadow-2xl">
-                <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-2xl">
-                  <img
-                    src="/screenshots/screenshot-1.png"
-                    alt="Shiftaty App Icon"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+          {/* Platform Note */}
+          <div className="mt-8 flex items-center justify-center lg:justify-start gap-2 text-white/70">
+            <Smartphone className="w-5 h-5" />
+            <span className="arabic-text text-sm">متاح على Android (APK)</span>
+          </div>
+        </div>
 
-                {/* App Name */}
-                <div className="text-center mt-6">
-                  <h3 className="arabic-text text-2xl font-bold text-white">Shiftaty</h3>
-                  <p className="arabic-text text-white/70 text-sm mt-1">شفتاتي</p>
-                </div>
+        {/* App Icon Display */}
+        <div className={`w-full lg:w-1/2 flex justify-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
+          <div className="relative">
+            {/* Glow */}
+            <div className="absolute inset-0 bg-white/30 rounded-3xl blur-3xl scale-150" />
+
+            {/* App Icon Card */}
+            <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 shadow-2xl">
+              <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="/screenshots/screenshot-1.png"
+                  alt="Shiftaty App Icon"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
-              {/* Floating Badge */}
-              <div className="absolute -top-4 -right-4 bg-brand-green text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg arabic-text animate-pulse">
-                مجاني!
+              {/* App Name */}
+              <div className="text-center mt-6">
+                <h3 className="arabic-text text-2xl font-bold text-white">Shiftaty</h3>
+                <p className="arabic-text text-white/70 text-sm mt-1">شفتاتي</p>
               </div>
+            </div>
+
+            {/* Floating Badge */}
+            <div className="absolute -top-4 -right-4 bg-brand-green text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg arabic-text animate-pulse">
+              مجاني!
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    </section >
   );
 };
 
