@@ -14,84 +14,116 @@
     </style>
 </head>
 
-<body class="bg-slate-50 min-h-screen p-4">
-    <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden mt-8 border border-slate-100">
+<body class="bg-slate-50 min-h-screen p-4 flex flex-col items-center">
+
+    <!-- App Logo & Branding -->
+    <div class="mt-8 mb-6 text-center">
+        <div class="inline-block p-1 rounded-3xl bg-gradient-to-br from-[#3B82F6] to-[#10B981] shadow-lg mb-4">
+            <div class="bg-white rounded-3xl p-4">
+                <img src="/logo.png" alt="Shiftaty Logo" class="w-20 h-20 object-contain">
+            </div>
+        </div>
+        <h1 class="text-3xl font-bold text-slate-800">Shiftaty</h1>
+        <p class="text-slate-500 font-medium">شفتاتي - نظّم شفتاتك بذكاء</p>
+    </div>
+
+    <div class="w-full max-w-2xl bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 mb-8">
         <!-- Header -->
-        <div class="bg-[#2AABEE] p-6 text-center text-white">
-            <h1 class="text-3xl font-bold mb-2">📲 طريقة تحميل "شيفتاتي" على الآيفون</h1>
-            <p class="text-white/90">عشان التطبيق يشتغل معاك تمام ومن غير نت، اتبع الـ ٣ خطوات دول بالظبط</p>
+        <div class="bg-gradient-to-r from-[#3B82F6] to-[#2563EB] p-8 text-center text-white relative overflow-hidden">
+            <!-- Decorative Circles -->
+            <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-white/10 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 rounded-full bg-white/10 blur-3xl"></div>
+
+            <h2 class="text-2xl md:text-3xl font-bold mb-3 relative z-10">📲 طريقة التحميل على الآيفون</h2>
+            <p class="text-white/90 text-lg relative z-10">اتبع الخطوات التالية لتثبيت التطبيق وتشغيله بدون إنترنت</p>
         </div>
 
-        <div class="p-6 md:p-8 space-y-8">
+        <div class="p-6 md:p-8 space-y-10">
             <!-- Video Tutorial -->
-            <div class="relative bg-slate-900 rounded-xl overflow-hidden aspect-video shadow-lg">
-                <video controls class="w-full h-full object-contain" poster="/logo.png">
+            <div
+                class="relative bg-slate-900 rounded-2xl overflow-hidden aspect-video shadow-2xl border-4 border-slate-100 ring-4 ring-slate-50">
+                <video controls class="w-full h-full object-contain" poster="/screenshots/screenshot-1.png">
                     <source src="/screenshots/shiftaty-ios.mp4" type="video/mp4">
                     متصفحك لا يدعم تشغيل الفيديو.
                 </video>
             </div>
 
             <!-- Steps -->
-            <div class="space-y-6">
+            <div class="space-y-8 relative">
+                <!-- Connecting Line -->
+                <div class="absolute right-[19px] top-8 bottom-8 w-0.5 bg-slate-100 -z-10 hidden md:block"></div>
+
                 <!-- Step 1 -->
-                <div class="flex gap-4 items-start">
+                <div class="flex gap-6 items-start relative group">
                     <div
-                        class="flex-shrink-0 w-8 h-8 bg-blue-100 text-[#2AABEE] rounded-full flex items-center justify-center font-bold text-lg">
+                        class="flex-shrink-0 w-10 h-10 bg-blue-50 text-[#3B82F6] rounded-full flex items-center justify-center font-bold text-xl ring-4 ring-white shadow-sm group-hover:bg-[#3B82F6] group-hover:text-white transition-colors duration-300">
                         ١</div>
-                    <div>
-                        <h3 class="font-bold text-lg text-slate-800 mb-2">افتح اللينك من سفاري (Safari)</h3>
-                        <p class="text-slate-600 leading-relaxed">
-                            ضروري جداً تفتح اللينك ده من متصفح سفاري 🧭 مش أي متصفح تاني:
-                            <a href="https://aboelkhiermohamed.github.io/shiftaty"
-                                class="text-[#2AABEE] font-bold block mt-1 dir-ltr text-right hover:underline">
-                                https://aboelkhiermohamed.github.io/shiftaty
-                            </a>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-xl text-slate-800 mb-2">افتح اللينك من سفاري (Safari)</h3>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            عشان الخطوات تنجح، لازم تفتح الرابط ده من متصفح <strong>Safari</strong> 🧭
                         </p>
+                        <a href="https://aboelkhiermohamed.github.io/shiftaty"
+                            class="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 bg-gradient-to-r from-[#3B82F6] to-[#2563EB] text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 hover:scale-105 hover:shadow-xl transition-all duration-300 group">
+                            <span>اضغط هنا لفتح الرابط</span>
+                            <svg class="w-5 h-5 mr-2 transform rotate-180 group-hover:-translate-x-1 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Step 2 -->
-                <div class="flex gap-4 items-start">
+                <div class="flex gap-6 items-start relative group">
                     <div
-                        class="flex-shrink-0 w-8 h-8 bg-blue-100 text-[#2AABEE] rounded-full flex items-center justify-center font-bold text-lg">
+                        class="flex-shrink-0 w-10 h-10 bg-blue-50 text-[#3B82F6] rounded-full flex items-center justify-center font-bold text-xl ring-4 ring-white shadow-sm group-hover:bg-[#3B82F6] group-hover:text-white transition-colors duration-300">
                         ٢</div>
                     <div>
-                        <h3 class="font-bold text-lg text-slate-800 mb-2">الإضافة للشاشة الرئيسية</h3>
+                        <h3 class="font-bold text-xl text-slate-800 mb-2">اضغط على زر المشاركة</h3>
                         <p class="text-slate-600 leading-relaxed">
-                            دوس على علامة المشاركة (Share) اللي تحت في النص (شكل مربع طالع منه سهم لفوق ⬆️).
+                            دوس على علامة المشاركة (Share) الموجودة في أسفل الشاشة (شكل مربع وسهم ⬆️).
                         </p>
                     </div>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="flex gap-4 items-start">
+                <div class="flex gap-6 items-start relative group">
                     <div
-                        class="flex-shrink-0 w-8 h-8 bg-blue-100 text-[#2AABEE] rounded-full flex items-center justify-center font-bold text-lg">
+                        class="flex-shrink-0 w-10 h-10 bg-blue-50 text-[#3B82F6] rounded-full flex items-center justify-center font-bold text-xl ring-4 ring-white shadow-sm group-hover:bg-[#3B82F6] group-hover:text-white transition-colors duration-300">
                         ٣</div>
                     <div>
-                        <h3 class="font-bold text-lg text-slate-800 mb-2">التثبيت</h3>
+                        <h3 class="font-bold text-xl text-slate-800 mb-2">إضافة للشاشة الرئيسية</h3>
                         <p class="text-slate-600 leading-relaxed">
-                            انزل في القائمة شوية واختار "Add to Home Screen" (أو إضافة إلى الشاشة الرئيسية)، وبعدين دوس
-                            <strong>Add</strong> من فوق.
+                            اختر "Add to Home Screen" (أو إضافة إلى الشاشة الرئيسية)، ثم اضغط <strong>Add</strong>.
                         </p>
                     </div>
                 </div>
             </div>
 
             <!-- Conclusion -->
-            <div class="bg-green-50 border border-green-200 rounded-xl p-4 text-center">
-                <p class="text-green-800 font-medium">
-                    بس كده! 🎉 التطبيق نزل عندك مع باقي البرامج، وتقدر تفتحه وتستخدمه عادي جداً حتى لو مفيش نت 🚀
-                </p>
+            <div
+                class="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-100 rounded-2xl p-6 text-center transform hover:scale-[1.02] transition-transform duration-300">
+                <div class="text-3xl mb-2">🎉</div>
+                <h3 class="text-green-800 font-bold text-lg mb-1">مبروك! التطبيق جاهز</h3>
+                <p class="text-green-700">تقدر دلوقتي تستخدم التطبيق في أي وقت حتى بدون إنترنت 🚀</p>
             </div>
 
             <!-- Back Button -->
-            <div class="text-center pt-4">
-                <a href="/" class="inline-block text-slate-500 hover:text-[#2AABEE] transition-colors font-medium">
-                    &larr; العودة للرئيسية
+            <div class="text-center pt-2">
+                <a href="/"
+                    class="inline-flex items-center text-slate-400 hover:text-[#3B82F6] transition-colors font-medium hover:underline gap-2">
+                    <span>&larr;</span>
+                    <span>العودة للصفحة الرئيسية</span>
                 </a>
             </div>
         </div>
+    </div>
+
+    <div class="text-center text-slate-400 text-sm mb-8">
+        &copy; 2024 Shiftaty. جميع الحقوق محفوظة.
     </div>
 </body>
 
